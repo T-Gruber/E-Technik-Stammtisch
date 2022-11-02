@@ -27,10 +27,14 @@ def plot_stats(content):
                 count_dict[key] += 1
 
     plt.plot(list(count_dict.keys()), list(count_dict.values()), "ro")
+    plt.title("Stammtisch-Statistik")
     plt.ylabel("Teilgenommen x mal")
+    plt.grid()
     plt.show()
     plt.plot(list(count_dict.keys()), list(count_dict.values()), "ro")
+    plt.title("Stammtisch-Statistik")
     plt.ylabel("Teilgenommen x mal")
+    plt.grid()
     plt.savefig('statistics.png')
 
 
