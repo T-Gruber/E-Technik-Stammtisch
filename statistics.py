@@ -29,11 +29,13 @@ def plot_stats(content):
     plt.plot(list(count_dict.keys()), list(count_dict.values()), "ro")
     plt.title("Stammtisch-Statistik")
     plt.ylabel("Teilgenommen x mal")
+    plt.yticks([i for i in range(0, max(count_dict.values()) + 1)])
     plt.grid()
     plt.show()
     plt.plot(list(count_dict.keys()), list(count_dict.values()), "ro")
     plt.title("Stammtisch-Statistik")
     plt.ylabel("Teilgenommen x mal")
+    plt.yticks([i for i in range(0, max(count_dict.values()) + 1)])
     plt.grid()
     plt.savefig('statistics.png')
 
