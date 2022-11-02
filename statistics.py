@@ -18,29 +18,33 @@ def read_csv(path_to_csv):
 
     return content
 
-def plot_stats(content):
 
+def get_stats(content):
     count_dict = {key:0 for key in content[0].keys() if key != "Datum" and key != "Gastgeber"}
     for i in range(len(content)):
         for key in count_dict.keys():
             if content[i][key] == "x":
                 count_dict[key] += 1
+    return count_dict
+
+
+def plot_stats(count_dict, mode = "plot"):
 
     plt.plot(list(count_dict.keys()), list(count_dict.values()), "ro")
     plt.title("Stammtisch-Statistik")
     plt.ylabel("Teilgenommen x mal")
     plt.yticks([i for i in range(0, max(count_dict.values()) + 1)])
     plt.grid()
-    plt.show()
-    plt.plot(list(count_dict.keys()), list(count_dict.values()), "ro")
-    plt.title("Stammtisch-Statistik")
-    plt.ylabel("Teilgenommen x mal")
-    plt.yticks([i for i in range(0, max(count_dict.values()) + 1)])
-    plt.grid()
-    plt.savefig('statistics.png')
+    if mode == "plot":
+        plt.show()
+    elif mode == "save":
+        plt.savefig('statistics.png')
 
 
 if __name__ == "__main__":
 
-    content = read_csv("2022_Auswertung.csv")
-    plot_stats(content)
+    content     = read_csv("2022_Auswertung.csv")
+    count_dict  = get_stats(content)
+
+    plot_stats(count_dict, "plot")
+    plot_stats(count_dict, "save")
