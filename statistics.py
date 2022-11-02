@@ -30,11 +30,10 @@ def get_stats(content):
 
 def plot_stats(count_dict, mode = "plot"):
 
-    plt.plot(list(count_dict.keys()), list(count_dict.values()), "ro")
+    plt.bar(list(count_dict.keys()), list(count_dict.values()), width=0.4)
     plt.title("Stammtisch-Statistik")
     plt.ylabel("Teilgenommen x mal")
     plt.yticks([i for i in range(0, max(count_dict.values()) + 1)])
-    plt.grid()
     if mode == "plot":
         plt.show()
     elif mode == "save":
