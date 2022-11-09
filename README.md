@@ -1,4 +1,4 @@
-# E-Technik-Stammtisch
+# E-Technik Stammtisch
 
 ## Inhalt: 
 - csv-Datei zum Erfassen der Teilnehmer jedes Stammtisches
