@@ -1,8 +1,16 @@
 # E-Technik Stammtisch
 
-## Inhalt: 
-- csv-Datei zum Erfassen der Teilnehmer jedes Stammtisches
-- Pythonskript zum Erstellen der aktuellen Statistik
+## Aktualisieren: 
+1. Aktualisieren der csv-Datei
+2. Ausführen des Shell-Skripts um aktuelle Statistik zu plotten/speichern, zu committen und in main zu pushen:
+Einmalig: 
+```console
+chmod +x update.sh
+```
+Zum Updaten: 
+```
+./update.sh
+```
 
 
 
