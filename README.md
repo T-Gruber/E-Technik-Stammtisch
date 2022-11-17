@@ -19,3 +19,4 @@ Zum Updaten:
 
 ## Aktueller Überblick:
 ![Alt text](/statistics.png?raw=true "Teilnehmer Statistik")
+![Alt text](/map.png?raw=true "Teilnehmer Karte")
